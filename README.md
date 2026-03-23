@@ -140,8 +140,8 @@ CREATE TABLE todos (
 **1. Clone the repository**
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/todo-app.git
-cd todo-app
+git clone https://github.com/lauraneval/TDLS-2303.git
+cd TDLS-2303
 ```
 
 **2. Install dependencies**
