@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todo App — Form Input</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    </head>
+    <body class="bg-light">
+
+        <!-- Navbar (sama seperti index.html) -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+            <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-check2-square me-2"></i>TodoApp
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="index.html">Beranda</a>
+                <a class="nav-link active" href="form.html">Tambah Todo</a>
+                <a class="nav-link" href="data.html">Lihat Data</a>
+            </div>
+            </div>
+        </nav>
+
+        <!-- Form Container -->
+        <div class="container my-5">
+            <div class="row justify-content-center">
+            <div class="col-lg-7">
+
+                <!-- Alert container (ditampilkan jQuery setelah submit) -->
+                <div id="alertContainer"></div>
+
+                <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <!-- Judul form berubah dinamis saat mode Edit -->
+                    <h5 class="mb-0"><i class="bi bi-pencil-plus me-2"></i>
+                    <span id="formTitle">Tambah Todo Baru</span>
+                    </h5>
+                </div>
+                <div class="card-body p-4">
+
+                    <!-- Form dengan id="todoForm" untuk ditangkap jQuery -->
+                    <form id="todoForm">
+                    <!-- Hidden input untuk menyimpan ID saat mode Edit -->
+                    <input type="hidden" id="todoId">
+
+                    <div class="mb-3">
+                        <label for="title" class="form-label fw-bold">
+                        Judul Todo <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="title"
+                            placeholder="Contoh: Belajar Express.js" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="description" class="form-label fw-bold">Deskripsi</label>
+                        <textarea class="form-control" id="description" rows="3"
+                                placeholder="Tambahkan detail (opsional)..."></textarea>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                        <label for="priority" class="form-label fw-bold">Prioritas</label>
+                        <select class="form-select" id="priority">
+                            <option value="low">🟢 Rendah</option>
+                            <option value="medium" selected>🟡 Sedang</option>
+                            <option value="high">🔴 Tinggi</option>
+                        </select>
+                        </div>
+                        <div class="col-md-6">
+                        <label for="status" class="form-label fw-bold">Status</label>
+                        <select class="form-select" id="status">
+                            <option value="pending" selected>⏳ Pending</option>
+                            <option value="in-progress">🔄 In Progress</option>
+                            <option value="done">✅ Done</option>
+                        </select>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 d-flex gap-2">
+                        <button type="submit" class="btn btn-primary" id="submitBtn">
+                        <i class="bi bi-save me-2"></i>Simpan Todo
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="resetBtn">
+                        <i class="bi bi-x-circle me-2"></i>Reset
+                        </button>
+                        <a href="data.html" class="btn btn-outline-primary ms-auto">
+                        <i class="bi bi-table me-2"></i>Lihat Data
+                        </a>
+                    </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Script logika form ada di Tahap 4 -->
+        <script src="js/form.js"></script>
+    </body>
+</html>
