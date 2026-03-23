@@ -152,10 +152,10 @@ npm install
 
 **3. Configure environment variables**
 
-Create a `.env` file in the root directory based on `.env.example`:
+Create a `.env` file in the root directory:
 
 ```bash
-cp .env.example .env
+touch .env
 ```
 
 Then fill in your Supabase credentials:
