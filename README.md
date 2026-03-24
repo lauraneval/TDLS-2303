@@ -191,7 +191,7 @@ Open `http://localhost:3000` in your browser to view the app.
 | `SUPABASE_ANON_KEY` | Your Supabase public anon key |
 | `PORT` | Port for the Express server (default: `3000`) |
 
-A `.env.example` file is provided as a reference template. **Never commit your `.env` file.**
+**Never commit your `.env` file.**
 
 ---
 
